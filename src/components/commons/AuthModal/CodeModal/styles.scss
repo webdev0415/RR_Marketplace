@@ -1,0 +1,29 @@
+.verifyCodeModal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 80%;
+
+  .innerBlock {
+    width: 100%;
+    max-width: 320px;
+    min-height: 28px;
+    text-align: center;
+    position: relative;
+
+    &.formTitle {
+      margin: 16px auto;
+    }
+  }
+
+  .resendCode {
+    cursor: pointer;
+    padding: 0px 12px;
+    color: var(--rio-primary);
+  }
+
+  .userEmail {
+    color: var(--rio-secondary);
+  }
+}

@@ -1,0 +1,423 @@
+.CarDetailSummary {
+  display: flex;
+  flex-direction: column;
+  min-width: 390px;
+  max-width: 400px;
+  background: var(--black);
+
+  .CarInfo {
+    display: flex;
+    justify-content: space-between;
+    padding: 27px 80px 13px;
+
+    > div {
+      flex: 1;
+    }
+
+    .CarInfoRight {
+      padding-left: 80px;
+    }
+
+    .CarInfoItem {
+      &:first-child {
+        margin-bottom: 26px;
+      }
+
+      .subtitle2 {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        margin-bottom: 0px;
+        font-size: 28px;
+        font-weight: bold;
+        color: var(--gray);
+      }
+      .subject {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        font-size: 26px;
+        color: var(--gray67);
+      }
+    }
+
+    @media (max-width: 1600px) {
+      padding: 25px 45px 22px 46px;
+      .CarInfoRight {
+        padding-left: 0px;
+        text-align: right;
+      }
+
+      .CarInfoItem {
+        &:first-child {
+          margin-bottom: 22px;
+        }
+
+        .subtitle2 {
+          font-size: 18px;
+          margin-bottom: 2px;
+        }
+
+        .subject {
+          font-size: 18px;
+        }
+      }
+    }
+
+    @media (max-width: 1280px) {
+      padding: 20px 48px 20px;
+
+      .CarInfoItem {
+        &:first-child {
+          margin-bottom: 19px;
+        }
+
+        .subtitle2 {
+          margin-bottom: 2px;
+        }
+      }
+    }
+
+    @media (max-width: 1024px) {
+      padding: 47px 43px 28px;
+
+      .CarInfoItem {
+        &:first-child {
+          margin-bottom: 28px;
+        }
+
+        .subtitle2 {
+          margin-bottom: 5px;
+          font-size: 28px;
+        }
+        .subject {
+          font-size: 26px;
+        }
+      }
+    }
+
+    @media (max-width: 640px) {
+      padding: 47px 43px 28px 43px;
+      .CarInfoItem {
+        .CarInfoItem {
+          &:first-child {
+            margin-bottom: 22px;
+          }
+
+          .subtitle2 {
+            font-size: 18px;
+            margin-bottom: 5px;
+          }
+
+          .subject {
+            font-size: 18px;
+          }
+        }
+      }
+    }
+
+    @media (max-width: 480px) {
+      padding: 45px 15px 47px 15px;
+      .CarInfoItem {
+        &:first-child {
+          margin-bottom: 22px;
+        }
+
+        .subtitle2 {
+          margin-bottom: 5px;
+          font-size: 18px;
+        }
+
+        .subject {
+          font-size: 18px;
+        }
+      }
+    }
+  }
+
+  .CarStatusTabView {
+    flex: 1;
+
+    .ant-tabs {
+      height: 100%;
+    }
+
+    .ant-tabs-content-holder {
+      height: 100%;
+    }
+
+    .ant-tabs-nav {
+      margin-bottom: 20px;
+      &:before {
+        display: none;
+      }
+
+      .ant-tabs-nav-list {
+        width: 100%;
+        overflow: hidden;
+        background: var(--rio-menu);
+
+        .ant-tabs-tab {
+          flex: 1;
+          margin: 0 1px;
+          padding: 12px 0 8px;
+          justify-content: center;
+          background: var(--rio-submenu);
+
+          .custom-tab-title {
+            display: flex;
+            flex-direction: column;
+            color: var(--gray);
+            align-items: center;
+            font-size: 12px;
+
+            svg {
+              fill: var(--gray);
+            }
+          }
+          &:hover,
+          &.ant-tabs-tab-active {
+            background: var(--rio-menu);
+
+            .custom-tab-title {
+              color: var(--rio-secondary);
+              font-weight: var(--font-bold);
+
+              svg {
+                fill: var(--rio-secondary);
+              }
+            }
+          }
+        }
+        .ant-tabs-ink-bar {
+          display: none;
+        }
+      }
+
+      @media (max-width: 1024px) {
+        .ant-tabs-nav-list {
+          .ant-tabs-tab {
+            padding: 5px 0;
+          }
+        }
+      }
+
+      @media (max-width: 768px) {
+        .ant-tabs-nav-list {
+          .ant-tabs-tab {
+            padding: 7px 0;
+          }
+        }
+      }
+    }
+
+    .ant-tabs-content {
+      padding: 0px 20px 20px;
+      height: 100%;
+
+      .ant-tabs-tabpane {
+        &.status {
+          display: flex;
+          justify-content: space-around;
+
+          .StatusCard {
+            flex: 1;
+            max-width: 180px;
+            padding: 24px 0px;
+            border-radius: 6px;
+            background-color: var(--rio-menu);
+            display: flex;
+            align-items: center;
+
+            &:first-child {
+              margin-right: 20px;
+            }
+          }
+        }
+
+        &.details {
+          padding: 5px 60px 0;
+
+          .CarInfoItem {
+            display: flex;
+            margin-bottom: 18px;
+            width: 80%;
+
+            & > * {
+              font-size: 16px;
+              font-weight: var(--font-regular);
+              color: var(--white);
+            }
+
+            & > .subject {
+              white-space: nowrap;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              color: var(--white40);
+            }
+
+            > div {
+              flex: 1;
+            }
+
+            &:last-child {
+              margin-bottom: 0 !important;
+            }
+          }
+        }
+        &.level {
+          .line {
+            line-height: 1;
+            margin-bottom: 20px;
+            &:last-child {
+              margin-bottom: 0px;
+            }
+          }
+          padding: 6px 10px 0 26px;
+          .ant-progress-line {
+            line-height: 1;
+            padding-top: 4px;
+
+            .ant-progress-outer {
+              line-height: 1;
+              .ant-progress-inner {
+                height: 5px;
+              }
+            }
+          }
+        }
+      }
+
+      @media (max-width: 1600px) {
+        padding: 0px 18px 20px;
+
+        .ant-tabs-tabpane {
+          &.status {
+            .StatusCard {
+              &:first-child {
+                margin-right: 10px;
+              }
+              padding: 13px 0px 10px;
+            }
+          }
+
+          &.details {
+            padding: 0px 15px 0;
+
+            .CarInfoItem {
+              margin-bottom: 10px;
+              width: 95%;
+            }
+          }
+
+          &.level {
+            padding: 0px 0px 0 6px;
+            margin-top: -7px;
+
+            .line {
+              margin-bottom: 12px;
+            }
+          }
+        }
+      }
+
+      @media (max-width: 1280px) {
+        padding: 0px 18px 11px;
+
+        .ant-tabs-tabpane {
+          &.details {
+            padding: 0px 28px;
+
+            .CarInfoItem {
+              margin-bottom: 12px;
+              width: 95%;
+            }
+          }
+
+          &.level {
+            padding: 0px;
+            margin: 0;
+          }
+        }
+      }
+
+      @media (max-width: 1024px) {
+        .ant-tabs-tabpane {
+          .RioProgressBar {
+            .ant-progress.ant-progress-circle {
+              margin: 33px 0px 16px;
+            }
+          }
+          &.status {
+            .StatusCard {
+              padding: 36px 0px 45px;
+            }
+          }
+
+          &.details {
+            padding: 0px 32px 4px;
+
+            .CarInfoItem {
+              margin-bottom: 30px;
+              max-width: 400px;
+            }
+          }
+
+          &.level {
+
+            margin: 4px 4px 15px;
+            .line {
+              margin-bottom: 18px;
+              .ant-progress-line {
+                padding-top: 6px;
+              }
+            }
+          }
+        }
+      }
+
+      @media (max-width: 640px) {
+        padding: 0px 17px 19px;
+
+        .ant-tabs-tabpane {
+          &.status {
+            .StatusCard {
+              &:first-child {
+                margin-right: 20px;
+              }
+              padding: 36px 0px 31px;
+            }
+          }
+
+          &.details {
+            padding: 48px 7px;
+
+            .CarInfoItem {
+              margin-bottom: 60px;
+              width: 100%;
+              &:last-child {
+                margin-bottom: 0px;
+              }
+            }
+          }
+
+          &.level {
+            .line {
+              margin-bottom: 50px;
+            }
+          }
+        }
+
+        .RioProgressBar {
+          .ant-progress.ant-progress-circle {
+            margin: 33px 0px 31px;
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 480px) {
+    min-width: unset !important;
+  }
+}

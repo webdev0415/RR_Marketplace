@@ -1,0 +1,24 @@
+.searchBar {
+  width: 100%;
+  position: relative;
+  text-align: left;
+  max-width: 400px;
+  display: flex;
+  justify-content: flex-end;
+  padding-left: 15px;
+
+  .searchBar--inner {
+    position: relative;
+  }
+
+  .ant-input {
+    padding-left: 16px;
+    padding-right: 16px;
+    font-weight: var(--font-medium);
+    background-color: var(--rio-background);
+    color: var(--gray);
+    &:focus {
+      box-shadow: none;
+    }
+  }
+}

@@ -1,0 +1,43 @@
+.CardPageHeader {
+  border: 0px;
+  border-radius: 8px;
+  text-transform: uppercase;
+  min-height: 45px;
+  min-width: 150px;
+  color: var(--white);
+  font-weight: var(--font-bold);
+  font-size: 14px;
+  letter-spacing: 0.6px;
+  transition: none;
+  display: flex;
+  align-items: center;
+
+  .headingExtra {
+    color: white;
+    font-size: 48px;
+    font-weight: 900;
+    border-top-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    text-transform: uppercase;
+    position: relative;
+    display: inline-flex;
+
+    @media (max-width: 1440px) {
+      font-size: 42px;
+    }
+    @media (max-width: 600px) {
+      font-size: 32px;
+    }
+  }
+
+  .headerAction {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 18px;
+
+    .icon-button {
+      min-height: 45px;
+    }
+  }
+}

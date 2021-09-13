@@ -1,0 +1,23 @@
+.auth_modal {
+  .rio-modal-body {
+    padding-top: 0px;
+  }
+
+  .backBtn {
+    top: 50%;
+    position: absolute;
+    cursor: pointer;
+    display: flex;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 15px;
+
+    svg {
+      fill: var(--gray);
+
+      &:hover {
+        fill: var(--white);
+      }
+    }
+  }
+}

@@ -1,0 +1,28 @@
+.RioStationss {
+    .stationShowBarContainer {
+        margin-bottom: 30px;
+        display: flex;
+        justify-content: space-between;
+        .stationShowSwitch {
+          display: flex;
+          align-items: center;
+          .ant-switch-checked {
+            background-color: var(--rio-secondary);
+          }
+          .ant-switch-handle::before {
+            background-color: var(--white);
+          }
+          .showAvailableText {
+            margin-left: 8px;
+          }
+        }
+      }
+    .stationShowSwitch {
+      margin: 7px 0;
+    }
+}
+.emptyText {
+  text-align: center;
+  font-size: 1.2rem;
+  font-family: var(--font-family);
+}

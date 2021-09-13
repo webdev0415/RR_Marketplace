@@ -1,0 +1,147 @@
+.HomeHeroSection {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 97px);
+
+  @media (max-width: 1600px) {
+    height: calc(100vh - 72px);
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background: var(--black75);
+  }
+
+  video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 0;
+  }
+
+  .HomeHeroText {
+    z-index: 10;
+    text-align: center;
+    position: relative;
+    max-width: 750px;
+    .button_wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .HeroLogo {
+      height: 60px;
+      width: 60px;
+      margin: 0px auto;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    .heading1 {
+      font-size: 45px;
+    }
+    .heading3 {
+      font-size: 24px;
+    }
+
+    .StartButton {
+      margin-top: 28px;
+    }
+  }
+}
+
+.HomeContainer {
+  padding: 28px 32px;
+  max-width: 1640px;
+  margin: 0px auto;
+
+  .section {
+    margin-bottom: 40px;
+
+    &:last-child {
+      margin-bottom: 0px;
+    }
+
+    .title {
+      margin-bottom: 28px;
+    }
+  }
+
+  .OwnTheRace {
+    .CardGrid {
+      display: grid;
+      grid-gap: 25px;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+
+      @media (min-width: 1366px) {
+        grid-template-columns: repeat(4, minmax(280px, 1fr));
+      }
+    }
+    .HomeCard {
+      background: var(--rio-menu);
+      display: flex;
+      margin-bottom: 0px;
+      align-items: center;
+      padding: 4px 8px;
+      cursor: pointer;
+      img {
+        margin-right: 12px;
+      }
+    }
+  }
+
+  .Article,
+  .Whitepaper {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    &.reverse {
+      flex-direction: row-reverse;
+      justify-content: flex-end;
+    }
+
+    .TextContent {
+      padding: 0px 24px;
+    }
+    @media (max-width: 1366px) and (min-width: 769px) {
+      .ImageWrapper {
+        width: 450px;
+        flex-shrink: 0;
+
+        img {
+          max-width: 100%;
+        }
+      }
+    }
+
+    @media (max-width: 768px) {
+      display: block;
+
+      .TextContent {
+        .title {
+          margin-top: 28px;
+        }
+      }
+
+      .ImageWrapper {
+        img {
+          max-width: 100%;
+        }
+      }
+    }
+  }
+}

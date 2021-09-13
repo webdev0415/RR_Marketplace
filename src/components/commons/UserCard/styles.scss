@@ -1,0 +1,33 @@
+.user_details {
+  padding: 16px 12px;
+  font-weight: var(--font-medium);
+  border-bottom: 1px solid;
+  border-color: var(--white12);
+
+  .myAccount {
+    font-size: 20px;
+    color: var(--white);
+    font-weight: var(--font-medium);
+    margin-top: 22px;
+  }
+
+  img {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    border-radius: 50%;
+    display: block;
+  }
+
+  .date {
+    font-size: 14px;
+    color: var(--white60);
+    font-weight: var(--font-medium);
+  }
+}
+
+span.rio-userImg img {
+  width: 100%;
+  max-width: 28px;
+  margin: 0 7px;
+}

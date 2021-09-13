@@ -1,0 +1,30 @@
+.step_one_banner {
+  color: var(--gray-light-fc);
+  .s_one_title {
+    text-align: center;
+    margin-bottom: 70px;
+  }
+  .s_one_terms {
+    margin-bottom: 60px;
+    .img_banner {
+      img {
+        width: 16px;
+        margin-right: 12px;
+      }
+    }
+  }
+  .accepting_statement {
+    text-align: center;
+    margin-bottom: 55px;
+    .highlights {
+      color: #f5dc61;
+      font-weight: bold;
+    }
+  }
+  .checkbox_banner {
+    text-align: center;
+    .s_one_checkbox {
+      margin-right: 10px;
+    }
+  }
+}

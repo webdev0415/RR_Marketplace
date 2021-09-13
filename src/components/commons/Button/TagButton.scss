@@ -1,0 +1,32 @@
+.RioTagButton {
+  padding: 6px 12px;
+  border-radius: 16px;
+  font-size: 14px;
+  margin-right: 10px;
+  user-select: none;
+  cursor: pointer;
+  white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+  color: var(--white40);
+  font-weight: var(--font-medium);
+  background: var(--rio-submenu);
+
+  &.primary {
+    color: var(--rio-primary);
+
+    svg {
+      margin-left: 18px;
+      fill: var(--rio-primary);
+    }
+  }
+
+  &.actived {
+    color: var(--black);
+    background: var(--rio-secondary);
+  }
+
+  &.disabled {
+    cursor: not-allowed;
+  }
+}

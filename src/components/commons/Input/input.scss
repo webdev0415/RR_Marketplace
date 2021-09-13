@@ -1,0 +1,135 @@
+.rioInput {
+  width: 100%;
+  position: relative;
+  text-align: left;
+
+  .rioInput--inner {
+    padding-top: 22px;
+    min-height: 56px;
+    position: relative;
+  }
+
+  .ant-input {
+    border: none;
+    padding: 0px;
+    padding-left: 16px;
+    padding-right: 16px;
+    font-size: 16px;
+    font-weight: var(--font-medium);
+
+    &:focus {
+      box-shadow: none;
+    }
+  }
+
+  .rioInput--helper,
+  .rioInput--label {
+    padding-left: 16px;
+    font-size: 12px;
+
+    font-weight: var(--font-medium);
+    transition: all 0.3s;
+  }
+
+  .rioInput--label {
+    top: 50%;
+    position: absolute;
+    transform: translateY(-50%);
+  }
+
+  .rioInput--helper {
+    margin-top: 4px;
+  }
+
+  .rioInput--suffix {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    min-width: 24px;
+    min-height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+
+  &.filled {
+    .rioInput--inner {
+      border-radius: 4px 4px 0px 0px;
+      background: var(--white12);
+      transition: all 0.3s;
+
+      &:hover {
+        background: var(--white04);
+      }
+    }
+    .rioInput--suffix,
+    .rioInput--helper,
+    .rioInput--label,
+    .ant-input {
+      color: var(--white60);
+      background: transparent;
+    }
+    &.disabled {
+      .rioInput--inner {
+        background: var(--white12) !important;
+      }
+      .rioInput--suffix,
+      .rioInput--helper,
+      .rioInput--label,
+      .ant-input {
+        color: var(--white40) !important;
+      }
+    }
+  }
+
+  &.focused {
+    .rioInput--label {
+      top: 6px;
+      transform: translateY(0);
+    }
+    .rioInput--helper,
+    .rioInput--label {
+      color: var(--rio-secondary);
+    }
+    .rioInput--inner {
+      &::after {
+        background: var(--rio-primary);
+      }
+    }
+  }
+
+  &.hasError {
+    .rioInput--helper,
+    .rioInput--label {
+      color: var(--rio-error);
+    }
+    .rioInput--inner {
+      &::after {
+        background: var(--rio-error);
+      }
+    }
+  }
+
+  &.focused,
+  &.hasError {
+    .rioInput--inner {
+      &::after {
+        content: "";
+        width: 100%;
+        height: 2px;
+        display: block;
+        bottom: 0px;
+        position: absolute;
+        transition: all 0.3s;
+      }
+    }
+  }
+
+  &.suffix {
+    .ant-input {
+      padding-right: 40px;
+    }
+  }
+}

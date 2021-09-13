@@ -1,0 +1,51 @@
+.rio-table {
+  margin-top: 16px;
+
+  .rio-table-header {
+    color: white;
+    font-size: 28px;
+    font-weight: 500;
+    position: relative;
+    padding-bottom: 8px;
+
+    &:after {
+      content: "";
+      width: 100%;
+      height: 4px;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      background: linear-gradient(to right, #fff 0%, #ccccff00 100%);
+      border-top-left-radius: 4px;
+      border-bottom-left-radius: 4px;
+    }
+  }
+
+  .ant-table {
+    background: transparent;
+    color: var(--white);
+    font-weight: 500;
+  }
+
+  .ant-table-thead > tr > th {
+    color: var(--white);
+    font-weight: 500;
+    border-bottom-color: var(--gray-300);
+    background: #5959591c;
+  }
+
+  .ant-table-tbody > tr > td {
+    border-bottom-color: var(--gray-300);
+  }
+
+  .ant-table-tbody > tr.ant-table-row:hover > td {
+    background: var(--gray-400);
+  }
+
+  .ant-table-wrapper {
+    overflow: auto;
+    .ant-table {
+      min-width: 320px;
+    }
+  }
+}

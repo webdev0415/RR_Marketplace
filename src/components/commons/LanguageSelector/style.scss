@@ -1,0 +1,58 @@
+.RioLanguageMenu {
+  .ant-dropdown-menu-title-content {
+    margin-left: 4px;
+  }
+}
+.ant-dropdown-menu {
+  background-color: var(--rio-submenu);
+  border-radius: 4px;
+  min-width: 160px;
+
+  .ant-dropdown-menu-item {
+    height: 40px;
+    margin-bottom: 8px;
+    padding: 0px 30px;
+    color: var(--gray);
+
+    a {
+      color: var(--gray);
+    }
+
+    &:hover,
+    &.active {
+      color: var(--rio-secondary);
+      background-color: var(--rio-submenu-active);
+      a {
+        color: var(--rio-secondary);
+      }
+    }
+  }
+}
+.RioLanguageTriger,
+.RioLanguageTrigerWithLabel {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+  position: relative;
+
+  span {
+    color: var(--gray);
+    margin-left: 16px;
+  }
+}
+
+.RioLanguageTriger {
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: -10px;
+    bottom: -10px;
+    right: -10px;
+    left: -10px;
+    border: 1px solid;
+    border-radius: 50%;
+    border-color: var(--rio-primary);
+  }
+}

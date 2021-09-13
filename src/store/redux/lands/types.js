@@ -1,0 +1,3 @@
+export const GET_LANDS = "GET_LANDS"
+export const GET_LANDS_SUCCESS = "GET_LANDS_SUCCESS"
+export const GET_LANDS_FAILED = "GET_LANDS_FAILED"

@@ -1,0 +1,64 @@
+.rioMainView {
+  height: 100%;
+  position: relative;
+
+  .rioPageHeader {
+    padding: 30px 30px 24px;
+
+    @media (min-width: 1600px) {
+      padding: 45px 30px 30px;
+    }
+
+    @media (max-width: 768px) {
+      padding: 20px 22px 30px;
+      background: var(--rio-menu);
+    }
+  }
+  .rioSubMenu {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    max-width: 100%;
+    overflow: auto;
+    background: var(--rio-submenu);
+    padding: 8px 12px;
+    box-shadow: 0px 3px 6px var(--black20);
+
+    .rioSubMenuItem {
+      height: 45px;
+      justify-content: space-between;
+    }
+
+    @media (max-width: 375px) {
+      justify-content: space-between;
+    }
+
+    &.sticky {
+      top: 0;
+      position: fixed;
+      width: 100%;
+      z-index: 1100;
+    }
+  }
+  .rioPageContent {
+    padding-left: 20px;
+    padding-right: 34px;
+    padding-bottom: 34px;
+
+    .CarGrid,
+    .StationGrid {
+      @media (min-width: 576px) {
+        display: grid;
+        grid-gap: 25px;
+
+        .RioCardWrapper {
+          margin-bottom: 5px;
+        }
+      }
+
+      @media (min-width: 768px) {
+        grid-template-columns: repeat(auto-fill, minmax(325px, 1fr));
+      }
+    }
+  }
+}

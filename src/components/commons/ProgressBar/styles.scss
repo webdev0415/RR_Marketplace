@@ -1,0 +1,82 @@
+.RioProgressBar {
+  width: 100%;
+
+  .ant-progress-circle-trail {
+    stroke: var(--gray1);
+  }
+
+  &.primary {
+    .ant-progress-line {
+      .ant-progress-inner {
+        background-color: var(--gray);
+
+        .ant-progress-bg {
+          background-color: var(--rio-primary);
+        }
+      }
+    }
+
+    .ant-progress-status-success,
+    .ant-progress-circle-path {
+      stroke: var(--rio-primary);
+    }
+  }
+
+  &.secondary {
+    .ant-progress-line {
+      .ant-progress-inner {
+        background-color: var(--gray);
+
+        .ant-progress-bg {
+          background-color: var(--rio-secondary);
+        }
+      }
+    }
+
+    .ant-progress-status-success,
+    .ant-progress-circle-path {
+      stroke: var(--rio-secondary) !important;
+    }
+  }
+
+  .ant-progress-text {
+    font-size: 18px;
+    color: var(--white) !important;
+    font-weight: var(--font-bold);
+  }
+
+  &.dashboard,
+  &.circle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .ant-progress {
+      margin: 20px 0px 16px;
+    }
+  }
+
+  .RioLineProgressBarLabel {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    > span {
+      &:first-child {
+        font-size: 12px;
+      }
+      &:first-child {
+        color: var(--white);
+      }
+      &.start {
+        color: var(--gray);
+      }
+      &.progress {
+        color: var(--rio-secondary);
+      }
+      &.completed {
+        color: var(--rio-secondary);
+      }
+    }
+  }
+}

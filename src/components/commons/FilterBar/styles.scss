@@ -1,0 +1,95 @@
+.FilterContainer {
+  .CarFilterAndSort {
+    gap: 12px;
+    display: grid;
+    margin-bottom: 16px;
+    grid-template-columns: 1fr 230px;
+    align-items: flex-start;
+
+    .CarFilterOptions {
+      margin-bottom: 12px;
+
+      &:last-child {
+        margin-bottom: 0px;
+      }
+
+      .RioTagButton {
+        margin-bottom: 12px;
+      }
+    }
+
+    .SortButton {
+      display: inline-flex;
+      align-items: center;
+      cursor: pointer;
+      margin-bottom: 32px;
+
+      &[disabled] {
+        opacity: 0.5;
+        cursor: not-allowed;
+        user-select: none;
+
+        .SortButtonText {
+          color: var(--gray);
+        }
+      }
+
+      .ant-dropdown-open.selected {
+        svg {
+          transform: rotate(180deg);
+        }
+      }
+
+      .selected {
+        display: inline-flex;
+        align-items: center;
+        margin-left: 16px;
+        color: var(--rio-secondary);
+
+        svg {
+          fill: var(--rio-secondary);
+          margin-left: 16px;
+          transition: all 0.3s;
+        }
+      }
+
+      .SortButtonText {
+        margin-left: 16px;
+      }
+
+      .SortIcon {
+        display: inline-flex;
+      }
+
+      svg {
+        fill: var(--gray);
+      }
+
+      @media (max-width: 575px) {
+        .SortButtonText {
+          display: none;
+        }
+      }
+    }
+
+    .CarShowSwitch {
+      display: flex;
+      align-items: center;
+      margin-bottom: 12px;
+
+      .ant-switch-checked {
+        background-color: var(--rio-secondary);
+      }
+      .ant-switch-handle::before {
+        background-color: var(--white);
+      }
+      .showAvailableText {
+        margin-left: 8px;
+      }
+    }
+  }
+
+  .subtitle2 {
+    margin-bottom: 16px;
+  }
+}

@@ -1,0 +1,23 @@
+.recaptcha_modal {
+  .rio-modal-body {
+    padding-top: 0px;
+  }
+  .no_robot_image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    img {
+      border-radius: 50%;
+    }
+  }
+  .captcha_wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  .continue_btn {
+    padding: 4px 32px;
+    margin: 40px auto 0px;
+  }
+}

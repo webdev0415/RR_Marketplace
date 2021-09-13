@@ -1,0 +1,18 @@
+.PayStausModal {
+  .rio-modal-header {
+    color: var(--white);
+    justify-content: center;
+    padding-top: 40px;
+    height: auto;
+  }
+  .rio-modal-body {
+    text-align: center;
+
+    .SpinnerContainer {
+      position: relative;
+      margin-top: 28px;
+      display: flex;
+      justify-content: center;
+    }
+  }
+}

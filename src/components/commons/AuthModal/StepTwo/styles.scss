@@ -1,0 +1,50 @@
+.stepTwoBanner {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: space-between;
+
+  .stepTwoTitle {
+    max-width: 370px;
+    margin: 16px 0px;
+    text-transform: uppercase;
+  }
+
+  .enterEmail {
+    max-width: 250px;
+    margin: 24px 0px;
+  }
+
+  .innerWrapper {
+    flex-grow: 1;
+    display: flex;
+    min-width: 320px;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+
+    .loginWithMetaMask {
+      max-width: 320px;
+      min-width: 250px;
+    }
+
+    .continue {
+      position: relative;
+      min-height: 45px;
+
+      button {
+        min-width: 250px;
+      }
+    }
+
+    .metamaskDesc {
+      max-width: 340px;
+
+      @media (max-width: 575px) {
+        max-width: 280px;
+      }
+    }
+  }
+}

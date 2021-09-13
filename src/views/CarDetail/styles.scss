@@ -1,0 +1,299 @@
+.CarDetailContainer {
+  margin: 0 40px;
+  @media (max-width: 768px) {
+    margin: 0 20px;
+  }
+
+  .rioPageHeader {
+    padding-left: 0;
+    padding-right: 0;
+    background: unset;
+  }
+
+  .rioPageContent {
+    display: grid;
+    overflow: hidden;
+    padding: 0;
+    margin-bottom: 60px;
+    grid-gap: 40px;
+    grid-template-columns: 1fr 444px;
+
+    @media (max-width: 1600px) {
+      display: grid;
+      grid-gap: 20px;
+      grid-template-columns: 1fr 301px;
+    }
+
+    @media (max-width: 1280px) {
+      display: grid;
+      grid-gap: 30px;
+      grid-template-columns: 1fr;
+    }
+
+    .RightContent {
+      display: flex;
+      flex-direction: column;
+
+      .SalesHisotryBlock {
+        flex: 1 1;
+        display: flex;
+        flex-direction: column;
+
+        .heading3 {
+          margin-top: 46px;
+        }
+        .RioCardWrapper {
+          flex: 1 1;
+          margin: 0;
+          padding: 51px 20px 51px 40px;
+          background: var(--black);
+          max-height: 635px;
+          overflow: hidden;
+          position: relative;
+
+          &:before {
+            content: "";
+            width: 100%;
+            height: 30px;
+            background: var(--black);
+          }
+
+          ul {
+            padding: 0;
+            li {
+              margin-bottom: 50px;
+              .subtitle2 {
+                font-size: 16px;
+                &.actionType {
+                  margin: 0 14px;
+                  color: var(--white40);
+                }
+              }
+              .secondLine {
+                margin-top: 20px;
+                display: flex;
+                justify-content: space-between;
+
+                .dateTime {
+                  color: var(--white40);
+                  font-size: 14px;
+                }
+                .ethValue {
+                  color: var(--rio-secondary);
+                  font-size: 14px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .LeftContent {
+      .RioCardWrapper {
+        .RioCarCardContent {
+          height: 635px;
+          .player-wrapper {
+            max-width: 635px;
+            align-items: baseline;
+          }
+        }
+        @media (min-width: 1024px) {
+          margin-bottom: 0px;
+        }
+      }
+
+      .CarDetailSummary {
+        width: calc(100% - 635px);
+        max-width: unset;
+        min-width: none;
+        min-width: 330px;
+      }
+    }
+
+    @media (max-width: 1600px) {
+      .LeftContent {
+        .RioCardWrapper {
+          .RioCarCardContent {
+            height: 526px;
+            .player-wrapper {
+              max-width: 526px;
+            }
+          }
+          .CarDetailSummary {
+            width: calc(100% - 526px);
+            max-width: unset;
+          }
+        }
+      }
+
+      .RightContent {
+        .SalesHisotryBlock {
+          .RioCardWrapper {
+            padding: 44px 16px 39px 17px;
+            max-height: 525px;
+
+            .SalesHistory {
+              ul li {
+                margin-bottom: 31px;
+                .historyRow {
+                  .sender {
+                    display: block;
+                    margin-bottom: 9px;
+                  }
+                  .actionType {
+                    margin-left: 0;
+                  }
+                  .secondLine {
+                    margin-top: 9px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    @media (max-width: 1280px) {
+      .RightContent {
+        .SalesHisotryBlock {
+          .heading3 {
+            margin-top: 0px;
+          }
+
+          .RioCardWrapper {
+            padding-left: 47px;
+            max-height: unset;
+
+            .SalesHistory {
+              overflow: unset;
+
+              ul li {
+                margin-bottom: 50px;
+                .historyRow {
+                  .sender {
+                    display: unset;
+                    margin-bottom: 20px;
+                  }
+
+                  .actionType {
+                    margin: 0 14px;
+                  }
+                  .secondLine {
+                    margin-top: 20px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    @media (max-width: 1024px) {
+      .LeftContent {
+        .RioCardWrapper {
+          .RioCarCardContent {
+            display: block;
+            height: 100%;
+
+            .player-wrapper {
+              width: 100%;
+              max-width: unset;
+            }
+          }
+          .CarDetailSummary {
+            width: 100%;
+          }
+        }
+      }
+    }
+
+    @media (max-width: 768px) {
+      .RightContent {
+        .SalesHisotryBlock {
+          .RioCardWrapper {
+            max-height: unset;
+            .SalesHistory {
+              overflow-y: unset;
+              height: 100%;
+            }
+          }
+        }
+      }
+    }
+
+    @media (max-width: 480px) {
+      .RightContent {
+        .SalesHisotryBlock {
+          .RioCardWrapper {
+            padding: 20px 0 20px 23px;
+            .SalesHistory {
+              padding-right: 22px;
+              ul li {
+                margin-bottom: 31px;
+                .historyRow {
+                  .sender {
+                    display: block;
+                    margin-bottom: 9px;
+                  }
+                  .actionType {
+                    margin-left: 0;
+                  }
+                  .secondLine {
+                    margin-top: 9px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .ant-tabs-tabpane.status {
+    .StatusCard {
+      max-width: unset !important;
+
+      .heading2 {
+        text-align: center;
+      }
+    }
+
+    &.ant-tabs-tabpane-active {
+      @media (max-width: 480px) {
+        display: block !important;
+        .StatusCard {
+          margin: 10px 0 !important;
+        }
+      }
+    }
+  }
+}
+
+.SalesHisotryBlock {
+  .RioCardWrapper {
+    .SalesHistory {
+      overflow-y: scroll;
+      height: 100%;
+      padding-right: 25px;
+
+      &::-webkit-scrollbar-track {
+        background-color: var(--gray3);
+        border-radius: 50px;
+      }
+
+      &::-webkit-scrollbar {
+        width: 5px;
+        background-color: var(--gray3);
+      }
+
+      &::-webkit-scrollbar-thumb {
+        border-radius: 50px;
+        background-color: var(--rio-primary_variant);
+      }
+    }
+  }
+}

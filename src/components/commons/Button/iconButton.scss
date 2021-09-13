@@ -1,0 +1,33 @@
+.rioIconButton {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  font-weight: var(--font-bold);
+  color: var(--white);
+  text-transform: uppercase;
+
+  span {
+    margin-top: 6px;
+    line-height: 1;
+    white-space: nowrap;
+  }
+
+  svg {
+    fill: var(--gray);
+  }
+
+  &.tabButton {
+    text-transform: capitalize;
+    font-weight: var(--font-regular);
+  }
+
+  &.actived {
+    color: var(--rio-secondary);
+
+    svg {
+      fill: var(--rio-secondary);
+    }
+  }
+}

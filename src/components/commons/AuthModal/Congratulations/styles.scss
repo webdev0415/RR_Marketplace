@@ -1,0 +1,34 @@
+.congratulationsModal {
+  height: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  align-items: center;
+
+  .heading {
+    font-size: 36px;
+    color: var(--white);
+    font-weight: var(--font-extra-bold);
+  }
+
+  .letStart {
+    min-width: 250px;
+    margin-bottom: 1rem;
+  }
+
+  .subTitle,
+  .letStart {
+    &.hide {
+      height: 0px;
+      opacity: 0;
+      visibility: hidden;
+    }
+    &.show {
+      opacity: 1;
+      height: auto;
+      visibility: visible;
+      transition: all 0.3s;
+    }
+  }
+}

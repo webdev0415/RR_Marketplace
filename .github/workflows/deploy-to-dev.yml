@@ -1,0 +1,42 @@
+name: Deploy MarketPlace App Frontend - Dev Environment
+on:
+  push:
+    branches:
+      - development
+jobs:
+  build-deploy_dev:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID}}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY}}
+          aws-region: ${{secrets.AWS_REGION}}
+      - name: create env file
+        run: |
+          touch .env
+          echo REACT_APP_AUTH_0_CLIENT_ID = ${{ secrets.AUTH_0_CLIENT_ID_DEV }} >> .env
+          echo REACT_APP_AUTH_0_CLIENT_SECRET_TOKEN = ${{ secrets.AUTH_0_CLIENT_SECRET_TOKEN_DEV }} >> .env
+          echo REACT_APP_AUTH_0_DOMAIN = ${{ secrets.AUTH_0_DOMAIN_DEV }} >> .env
+          echo REACT_APP_BASE_API_URL = ${{ secrets.BASE_API_URL_DEV }} >> .env
+          echo REACT_APP_IMAGEHOST = ${{ secrets.IMAGEHOST_DEV }} >> .env
+          echo REACT_APP_RECAPTCHA_SITE_KEY = ${{ secrets.RECAPTCHA_SITE_KEY_DEV }} >> .env
+          echo REACT_APP_RECAPTCHA_SECRET_KEY = ${{ secrets.RECAPTCHA_SECRET_KEY_DEV }} >> .env
+      - name: Cache Packages
+        uses: actions/cache@v2
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+      - name: Install Packages
+        run: npm install
+
+      - name: Generate Static Pages
+        run: CI=false npm run build
+
+      - name: Deploy website on S3 bucket
+        run: aws s3 sync ./build/ s3://${{secrets.AWS_S3_BUCKET_NAME_DEV}} --delete

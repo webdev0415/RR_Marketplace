@@ -1,0 +1,3 @@
+export const GET_SHOPS = "GET_SHOPS"
+export const GET_SHOPS_SUCCESS = "GET_SHOPS_SUCCESS"
+export const GET_SHOPS_FAILED = "GET_SHOPS_FAILED"

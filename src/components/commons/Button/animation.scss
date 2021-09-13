@@ -1,0 +1,99 @@
+.animation-button-wrap {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 75px;
+  margin: 5px;
+}
+
+.animation-button {
+  min-width: 100%;
+  min-height: 100%;
+  text-transform: uppercase;
+  color: #313133;
+  background: linear-gradient(90deg, #524d4d 0%, #050c0c 100%);
+  border: none;
+  border-radius: 1000px;
+  box-shadow: 12px 12px 24px rgba(79, 209, 197, 0.64);
+  transition: all 0.3s ease-in-out 0s;
+  cursor: pointer;
+  outline: none;
+  position: relative;
+  padding: 3px 8px;
+  font-size: 13px;
+  font-weight: 600;
+  color: white;
+  border-color: #071721;
+  border-width: 1px;
+  border-style: ridge;
+
+  &:before {
+    content: "";
+    border-radius: 1000px;
+    min-width: calc(100% + 8px);
+    min-height: calc(100% + 8px);
+    border: 2px solid #8f8f92a6;
+    box-shadow: 0 0 60px rgba(0, 255, 203, 0.64);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: all 0.3s ease-in-out 0s;
+  }
+
+  &:hover,
+  &:focus {
+    border: 0;
+    transform: translateY(-2px);
+    opacity: 1;
+    &:before {
+      opacity: 1;
+    }
+  }
+}
+
+@keyframes ring {
+  0% {
+    width: 30px;
+    height: 30px;
+    opacity: 1;
+  }
+  100% {
+    width: 300px;
+    height: 300px;
+    opacity: 0;
+  }
+}
+
+
+@media (min-width: 1440px) {
+  .animation-button-wrap {
+    margin: 10px 8px;
+    .animation-button {
+      padding: 6px 20px;
+      font-size: 14px;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .animation-button-wrap {
+    margin: 15px 8px;
+    .animation-button {
+      padding: 6px 20px;
+      font-size: 14px;
+    }
+  }
+}
+
+@media (max-width: 479px) {
+  .animation-button-wrap {
+    margin: 10px 4px;
+    .animation-button {
+      padding: 3px 10px;
+      font-size: 13px;
+    }
+  }
+}

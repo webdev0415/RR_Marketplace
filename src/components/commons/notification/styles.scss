@@ -1,0 +1,81 @@
+.ant-notification-notice {
+    &.custom-ant-notification {
+      border-radius: 4px;
+      padding: 18px 27px 22px;
+      background-color: var(--rio-submenu);
+      box-shadow: 0px 5px 5px var(--black20);
+  
+      .ant-notification-notice-content {
+        min-height: 1.5rem;
+  
+        .ant-notification-notice-icon {
+          display: inline-flex;
+          margin-left: 0px;
+  
+          svg {
+            fill: var(--rio-info);
+          }
+        }
+  
+        .ant-notification-notice-message {
+          margin-bottom: 0px;
+          font-size: 18px;
+          font-weight: var(--font-semi-bold);
+          color: var(--white);
+        }
+  
+        .ant-notification-notice-description {
+          color: var(--gray);
+          font-size: 16px;
+          margin-left: 0px;
+        }
+      }
+      .ant-notification-notice-close {
+        line-height: 1;
+        top: 18px;
+  
+        .ant-notification-close-icon {
+          font-size: 20px;
+  
+          svg {
+            fill: var(--gray);
+          }
+        }
+      }
+  
+      &.ant-notification-notice-error {
+        .ant-notification-notice-icon {
+          svg {
+            fill: var(--rio-error);
+          }
+        }
+        .ant-notification-notice-message {
+          color: var(--rio-error);
+        }
+      }
+  
+      &.ant-notification-notice-success {
+        .ant-notification-notice-icon {
+          svg {
+            fill: var(--rio-secondary);
+          }
+        }
+        .ant-notification-notice-message {
+          color: var(--rio-secondary);
+        }
+      }
+  
+      &.ant-notification-notice-warning {
+        .ant-notification-notice-icon {
+          svg {
+            fill: var(--rio-warn);
+            transform: rotate(180deg);
+          }
+        }
+        .ant-notification-notice-message {
+          color: var(--rio-warn);
+        }
+      }
+    }
+  }
+  

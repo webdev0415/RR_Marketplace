@@ -1,0 +1,20 @@
+.carStoreScreen {
+  .carList {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 16px;
+  }
+}
+.emptyText {
+  text-align: center;
+  font-size: 1.2rem;
+  font-family: var(--font-family);
+}
+
+.loadingBar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 400px;
+  max-height: 35vh;
+}

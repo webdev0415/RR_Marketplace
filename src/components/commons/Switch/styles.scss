@@ -1,0 +1,29 @@
+.RioSwitch {
+  height: 14px;
+  min-width: 34px;
+  background: var(--white40);
+
+  &.ant-switch-checked {
+    background: var(--pink40);
+
+    .ant-switch-handle {
+      left: calc(100% - 20px);
+
+      &::before {
+        background: var(--pink);
+      }
+    }
+  }
+
+  .ant-switch-handle {
+    width: 20px;
+    height: 20px;
+    top: -3px;
+    left: -1px;
+
+    &::before {
+      background: var(--gray2);
+      box-shadow: 0px ​1px 3px var(--black20);
+    }
+  }
+}

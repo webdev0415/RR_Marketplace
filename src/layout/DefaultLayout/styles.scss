@@ -1,0 +1,21 @@
+.home_banner {
+  background-color: var(--rio-background);
+
+  .content {
+    min-height: 200px;
+    @media (max-width: 767px) {
+      padding-top: 0px;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .home_banner
+    .footer_banner
+    .bottom_footer
+    .inner_footer_banner
+    .f_items_banner
+    .f_item {
+    font-size: 15px;
+  }
+}

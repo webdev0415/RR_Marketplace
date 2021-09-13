@@ -1,0 +1,16 @@
+.stepThreeBanner {
+  height: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+
+  .body1 {
+    max-width: 490px;
+
+    @media (max-width: 475px) {
+      max-width: 310px;
+    }
+  }
+}

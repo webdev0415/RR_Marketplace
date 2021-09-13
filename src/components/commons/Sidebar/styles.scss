@@ -1,0 +1,69 @@
+.DashboardSideMenu {
+  flex-shrink: 0;
+  position: relative;
+  background: var(--rio-menu);
+  box-shadow: 0px 0px 6px var(--black75);
+
+  @media (min-width: 1600px) {
+    min-width: 242px;
+  }
+
+  @media (max-width: 1600px) and (min-width: 1366px) {
+    min-width: 242px;
+  }
+  @media (max-width: 1366px) and (min-width: 1024px) {
+    min-width: 242px;
+  }
+
+  @media (max-width: 1024px) and (min-width: 768px) {
+    min-width: 242px;
+  }
+
+  .scrollbar-container {
+    max-height: calc(100vh - var(--header-height-lg));
+    @media (max-width: 1600px) {
+      max-height: calc(100vh - var(--header-height-md));
+    }
+  }
+
+  .heading1 {
+    padding-top: 50px;
+  }
+
+  .SideMenuItem {
+    display: flex;
+    align-items: center;
+    color: var(--gray);
+    padding: 25px 0px 25px 41px;
+    border-bottom: 1px solid #484848;
+
+    svg {
+      fill: var(--gray);
+    }
+
+    span {
+      margin-left: 20px;
+    }
+
+    &.active,
+    &:hover {
+      color: var(--rio-secondary);
+      background: var(--menu-hover);
+
+      svg,
+      path {
+        fill: var(--rio-secondary);
+      }
+    }
+  }
+
+  .SideMenuBottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    .MenuBottomItem {
+      background: var(--menu-hover);
+    }
+  }
+}

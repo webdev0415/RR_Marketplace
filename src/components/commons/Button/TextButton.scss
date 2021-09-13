@@ -1,0 +1,13 @@
+.RioTextButton {
+  font-size: 14px;
+  color: var(--rio-primary);
+  font-weight: var(--font-medium);
+  user-select: none;
+  display: flex;
+  align-items: center;
+
+  svg {
+    stroke: var(--rio-primary);
+    margin-left: 22px;
+  }
+}

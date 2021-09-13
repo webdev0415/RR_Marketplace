@@ -1,0 +1,17 @@
+.ant-loader {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  bottom: 0px;
+  right: 0px;
+
+  .ant-spin {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .ant-spin-dot-item {
+    background-color: var(--gray-light-7c);
+  }
+}
